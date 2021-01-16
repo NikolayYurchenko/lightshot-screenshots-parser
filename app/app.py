@@ -35,7 +35,7 @@ def do_requests_by_range():
                 do_requests_by_range()
 
             # Write file and save
-            out = open("./outImages/{in_img}.png".format(in_img=image_id), "wb")
+            out = open(config.store_path + "/{in_img}.png".format(in_img=image_id), "wb")
             out.write(image.content)
             out.close()
             print ("Success write image as file, image - " + first_img_url)
